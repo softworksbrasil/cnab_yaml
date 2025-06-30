@@ -1,0 +1,111 @@
+# Registro Detalhe - Segmento J-52 (Obrigatório - Liquidação de títulos – boletos Itaú e outros bancos)
+# Baseado na documentação do Itau
+# Disponível em: https://download.itau.com.br/bankline/SISPAG_CNAB.pdf
+
+codigo_do_lote:
+  # Identifica o Lote de Pagamentos.
+  # É sequencial, iniciando-se em 0001. Todos os pagamentos de um lote devem ter o mesmo "Código de Lote".
+  pos: [4, 7]
+  picture: '9(4)'
+
+tipo_registro:
+  # Código adotado pela FEBRABAN para identificar o tipo de registro.
+  # '3' = Detalhe
+  pos: [8, 8]
+  picture: '9(1)'
+  default: '3'
+
+numero_sequencial_lote:
+  # Número sequencial de um pagamento dentro do lote.
+  # O primeiro registro de um lote recebe o nº '00001' e assim consecutivamente
+  pos: [9, 13]
+  picture: '9(5)'
+
+codigo_segmento:
+  # Código adotado pela FEBRABAN para identificar o segmento do registro.
+  pos: [14, 14]
+  picture: 'X(1)'
+  default: 'J'
+
+tipo_movimento:
+  # Tipo de movimento 
+  # ---------------------------------
+  # Código | Tipo de movimento 
+  # ---------------------------------
+  # ‘000’  | Inclusão de pagamento
+  # ‘001’  | CPF
+  # ‘002’  | CNPJ
+  # ‘003’  | Apenas os 8 primeiros dígitos do CNPJ restante branco ou zerado
+  # ‘004’  | Inclusão de Demonstrativo de Pagamento/Holerite
+  # ‘512’  | Alteração do Demonstrativo de Pagamentos/Holerite
+  # ‘517’  | Alteração de Valor do Pagamento
+  # ‘519’  | Alteração da Data de Pagamento
+  # ‘998’  | Exclusão do Demonstrativo de Pagamentos/Holerit
+  # ‘999’  | Exclusão de pagamento incluído anteriormente
+  pos: [15, 17]
+  picture: '9(3)'
+
+codigo_registro:
+  # IDENTIFICAÇÃO DO REGISTRO OPCIONAL
+  pos: [18, 19]
+  picture: '9(2)'
+  default: '52'
+
+codigo_inscricao_pagador:
+  # Código que identifica o tipo do pagador.
+  # '1' = CPF
+  # '2' = CNPJ
+  pos: [20, 20]
+  picture: '9(1)'
+
+numero_inscricao_pagador:
+  # Informar o número de inscrição do pagador.
+  # se não informado entende-se que o pagador é o mesmo da conta débito informado no Header de Lote
+  pos: [21, 35]
+  picture: '9(15)'
+
+nome_pagador:
+  # Nome do pagador
+  pos: [36, 75]
+  picture: 'X(40)'
+
+codigo_inscricao_beneficiario:
+  # Código que identifica o tipo de inscrição do Beneficiário.
+  # '1' = CPF
+  # '2' = CNPJ
+  pos: [76, 76]
+  picture: '9(1)'
+
+numero_inscricao_beneficiario:
+  # Informar o número de inscrição do beneficiário.
+  # Campo de preenchimento obrigatório. Se não informado o pagamento será rejeitado
+  pos: [77, 91]
+  picture: '9(15)'
+
+nome_beneficiario:
+  # Nome do beneficiário
+  pos: [92, 131]
+  picture: 'X(40)'
+
+codigo_inscricao_sacador:
+  # Código que identifica o tipo de inscrição do sacador avalista.
+  # '1' = CPF
+  # '2' = CNPJ
+  pos: [132, 132]
+  picture: '9(1)'
+
+numero_inscricao_sacador:
+  # Informar o número de inscrição do sacador avalista.
+  pos: [133, 147]
+  picture: '9(15)'
+
+nome_sacador:
+  # Nome do sacador avalista
+  pos: [148, 187]
+  picture: 'X(40)'
+
+complemento_de_registro_01:
+  # Preencher com Zeros.
+  pos: [188, 240]
+  picture: 'X(53)'
+  default: ''

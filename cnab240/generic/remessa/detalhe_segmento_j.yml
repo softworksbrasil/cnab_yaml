@@ -1,6 +1,6 @@
-# Registro Detalhe - Segmento A (Obrigatório - Remessa)
-# Baseado na documentação do BB
-# Disponível em: http://www.bb.com.br/docs/pub/emp/empl/dwn/000Completo.pdf (Acesso em 22/06/2016)
+# Registro Detalhe - Segmento J (Obrigatório - Liquidação de títulos (bloquetos) em cobrança no Itaú e em outros Bancos)
+# Baseado na documentação do Itau
+# Disponível em: https://download.itau.com.br/bankline/SISPAG_CNAB.pdf 
 
 codigo_banco:
   # Código fornecido pelo Banco Central para identificação do Banco que está recebendo ou enviando o
@@ -52,7 +52,6 @@ tipo_movimento:
   # ‘9’   | Indica EXCLUSÃO
   pos: [15, 15]
   picture: '9(1)'
-  default: '0'
 
 codigo_instrucao_movimento:
   # Código de Movimento Remessa

@@ -1,0 +1,41 @@
+# Baseado na documentação do Itau
+# Disponível em: https://download.itau.com.br/bankline/SISPAG_CNAB.pdf
+
+codigo_do_lote:
+  pos: [4, 7]
+  picture: '9(4)'
+
+tipo_registro:
+  pos: [8, 8]
+  picture: '9(1)'
+  default: '5'
+
+complemento_de_registro_01:
+  # Preencher com Brancos.
+  pos: [9, 17]
+  picture: 'X(9)'
+  default: ''
+
+qtde_registro_lote:
+  pos: [18, 23]
+  picture: '9(6)'
+
+valor_total_lote:
+  pos: [24, 41]
+  picture: '9(16)V9(2)'
+
+complemento_de_registro_02:
+  # Preencher com Zeros.
+  pos: [42, 59]
+  picture: '9(18)'
+  default: '0'
+
+complemento_de_registro_03:
+  pos: [60, 230]
+  picture: 'X(171)'
+  default: ''
+
+ocorrencia:
+  # Apenas no retorno.
+  pos: [231, 240]
+  picture: 'X(10)'

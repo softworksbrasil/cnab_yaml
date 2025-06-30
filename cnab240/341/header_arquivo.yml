@@ -1,0 +1,117 @@
+# Baseado na documentação do Itau
+# Disponível em: https://download.itau.com.br/bankline/SISPAG_CNAB.pdf
+
+complemento_de_registro_01:
+  # Preencher com Brancos.
+  pos: [9, 14]
+  picture: 'X(6)'
+  default: ''
+
+numero_versao_layout_arquivo:
+  # Numero da versao do layout do arquivo.
+  pos: [15, 17]
+  picture: '9(3)'
+  default: '081'
+
+codigo_inscricao:
+  # Código que identifica o tipo de inscrição da Empresa ou Pessoa Física.
+  # '1' = CPF
+  # '2' = CNPJ
+  pos: [18, 18]
+  picture: '9(1)'
+
+numero_inscricao:
+  # Informar o número de inscrição da Empresa (CNPJ) ou Pessoa Física (CPF).
+  pos: [19, 32]
+  picture: '9(14)'
+
+complemento_de_registro_02:
+  # Preencher com brancos
+  pos: [33, 52]
+  picture: 'X(20)'
+  default: ''
+
+agencia:
+  # Código da Agência mantenedora da conta, fornecido pelo Itau.
+  pos: [53, 57]
+  picture: '9(5)'
+
+complemento_de_registro_03:
+  # Preencher com brancos.
+  pos: [58, 58]
+  picture: 'X(1)'
+  default: ''
+
+conta:
+  # Código da conta do Itau
+  pos: [59, 70]
+  picture: '9(12)'
+
+complemento_de_registro_04:
+  # Preencher com brancos.
+  pos: [71, 71]
+  picture: 'X(1)'
+  default: ''
+
+conta_dac:
+  # Dac da agencia / conta debitada
+  pos: [72, 72]
+  picture: '9(1)'
+
+nome_fantasia:
+  # Nome que identifica a pessoa, física ou jurídica, a qual se quer fazer referência
+  pos: [73, 102]
+  picture: 'X(30)'
+
+nome_do_banco:
+  # Nome que identifica o banco que está recebendo ou enviando o arquivo.
+  pos: [103, 132]
+  picture: 'X(30)'
+
+complemento_de_registro_05:
+  # Preencher com brancos.
+  pos: [133, 142]
+  picture: 'X(10)'
+  default: ''
+
+codigo_remessa_retorno:
+  # Código Remessa / Retorno
+  # Código adotado pela febraban para qualificar o envio ou devolução de arquivo entre a empresa
+  # cliente e o banco prestador dos serviços. informar:
+  # '1' = remessa (cliente banco)
+  # '2' = retorno (banco cliente)
+  pos: [143, 143]
+  picture: '9(1)'
+
+data_geracao:
+  # Data da criação do arquivo. utilizar o formato DDMMAAAA, onde : dd = dia, mm = mês, aa = ano
+  pos: [144, 151]
+  picture: '9(8)'
+  date_format: '%d%m%Y'
+
+hora_geracao:
+  # Hora da criação do arquivo. utilizar o formato hhmmss, onde : HH = hora, MM = minuto, SS = segundo
+  pos: [152, 157]
+  picture: '9(6)'
+  date_format: '%H%M%S'
+
+complemento_de_registro_06:
+  # Preencher com zeros.
+  pos: [158, 166]
+  picture: '9(9)'
+  default: '0'
+
+densidade_gravacao_arquivo:
+  # Densidade de gravação (bpi), do arquivo encaminhado. Pode ser:
+  # 1600 BPI
+  # 6250 BPI
+  # Pode ser informado ‘0’. (Padrão)
+  pos: [167, 171]
+  picture: '9(5)'
+  default: '0'
+
+complemento_de_registro_07:
+  # Preencher com brancos.
+  pos: [172, 240]
+  picture: 'X(69)'
+  default: ''
